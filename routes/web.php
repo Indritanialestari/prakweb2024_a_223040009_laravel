@@ -14,21 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home Page']);
 });
 
 Route::get('/about', function () {
-    return view('about', [
-        "name" => "Indri Tania Lestari",
-        "email" => "Indri.22304009@mail.ac.unpad.id",
-        "image" => "dokja.jpg"
-    ]);
+    return view('about', ['name'=>'Indri Tania Lestari', 'title' => 'About']);
 });
-
 Route::get('/blog', function () {
-    return view('posts');
+    return view('blog', ['title' => 'Blog']);
 });
-
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['title' => 'Contact']);
 });
