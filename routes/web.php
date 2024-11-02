@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['name'=>'Rafli Ramdhani', 'title' => 'About']);
+    return view('about', ['name'=>'Indri Tania Lestari', 'title' => 'About']);
 });
 Route::get('/posts', function () {
     return view('posts', ['title' => 'Blog', 'posts' => Post::all()]);
